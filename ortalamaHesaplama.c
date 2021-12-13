@@ -2,13 +2,63 @@
 #include <stdlib.h>
 #include <string.h>
 #include <windows.h>
+#include <iostream>
 
 int main()
 {
-    int m1,m2,m3,t1,t2,f1,f2,k1,k2,b1,b2,th1,th2,i1,i2;
-    float mort,tort,fort,kort,bort,thort,iort,gort;
+    char dersler[7] = {'Matematik','Turkce','Fizik','Kimya','Biyoloji','Tarih','Ingilizce'};
+    int notlar[];
+	float ortalamalar[];
 
-                 printf("Matematik 1.Sinav:");
+    int ortalamaHesaplama(int[])
+    {
+    	for (int i = 0; i < 7; i++){
+    		
+    		printf(i" 1.Sinav:");
+            scanf("%d", &notlar[i]);
+            printf(i" 2.Sinav:");
+            scanf("%d", &notlar[i+1]);
+                 
+            ort=(notlar[i]+notlar[i+1])/2 , &ortalamalar[i];
+            sum += ortalamalar[i];
+		}
+		gort = sum / 7, &ortalamalar[i];
+	}
+	
+	char degerlendirme(float[])
+	{
+		for (int i = 0; i < ortalamalar[];i++ )
+		{
+			if(ortalamalar[i] >= 85 ){
+                 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),2);
+                 	printf(i": %10.2f", ortalamalar[i]);
+                 	printf("%18s\n","COK IYI!");
+				 }
+				 else if (ortalamalar[i] < 85 && ortalamalar[i] >= 70){
+				    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),6);
+				 	printf(i": %10.2f", ortalamalar[i]);
+				 	printf("%32s\n","DAHA COK CALISMALISIN!");
+				 }
+				 else{
+				    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),4);
+				 	printf(i": %10.2f", ortalamalar[i]);
+				 	printf("%20s\n","IYI DEGIL!");
+				 }
+		}
+	}
+	
+	int ortalamaHesaplama(int notlar[]);
+	
+	printf("\n\n%s%20s%20s\n","Ders","Ortalama","Degerlendirme");
+	
+	char degerlendirme(float ortalamalar[]);
+	
+	
+	
+	
+	
+	/*
+	             printf("Matematik 1.Sinav:");
                  scanf("%d", &m1);
                  printf("Matematik 2.Sinav:");
                  scanf("%d", &m2);
@@ -191,5 +241,6 @@ int main()
 				 	printf("\nGenel: %14.2f", gort);
 				 	printf("%20s\n","IYI DEGIL!");
 				 }
+	*/			 
     return 0;
 }
